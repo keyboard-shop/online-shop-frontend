@@ -9,9 +9,8 @@ import LoginPage from '../pages/LoginPage'
 import Header from '../components/Header'
 import DashboardPage from '../pages/DashboardPage'
 import PrivateRoute from '../components/PrivateRoute'
-
-// import CreateBook from '../pages/CreateBook'
-// import Comment from '../pages/Comment'
+import CreateBook from '../pages/CreateBook'
+import Comment from '../pages/Comment'
 import Like from '../pages/Like'
 
 function App() {
