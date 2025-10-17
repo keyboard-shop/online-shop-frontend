@@ -1,105 +1,132 @@
 
 
 
-import React from 'react'
+// import React from 'react'
 
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 
 
-const CreateBook = () => {
+// const CreateBook = () => {
 
-    const [bookname, setBookname] = useState('');
-    const [author, setAuthor] = useState('');
-    const [price, setPrice] = useState('');
+//     const [bookname, setBookname] = useState('');
+//     const [author, setAuthor] = useState('');
+//     const [price, setPrice] = useState('');
 
-    const navigate = useNavigate()
+//     const navigate = useNavigate()
 
-    const handleSubmit = async (e) => {
+//     const handleSubmit = async (e) => {
         
-        e.preventDefault();
+//         e.preventDefault();
     
-// IT WORKS ==========================================================
-const bookData = {
-    bookname,
-    author,
-    price
-};
+// // IT WORKS ==========================================================
+// const bookData = {
+//     bookname,
+//     author,
+//     price
+// };
 
-try {
-    //const response = await fetch('http://localhost:8080/api/users/createbook', {
-    const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/createbook', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json', 
-        },
-        body: JSON.stringify(bookData), 
-    });
+// try {
+//     //const response = await fetch('http://localhost:8080/api/users/createbook', {
+//     const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/createbook', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json', 
+//         },
+//         body: JSON.stringify(bookData), 
+//     });
 
-    if (response.ok) {
-        const data = await response.json();
-        if (data.success) {
-            alert('Book created successfully!!!');
-            navigate('/'); 
-        }
-    } else {
-        const errorText = await response.text(); 
-        console.error('Error creating book:', errorText);
-        alert('Error creating book: ' + errorText);
-    }
-} catch (error) {
-    console.error('Network error:', error);
-    alert('Error creating book: ' + error.message);
-}
-};
-// IT WORKS ===============================================================
+//     if (response.ok) {
+//         const data = await response.json();
+//         if (data.success) {
+//             alert('Book created successfully!!!');
+//             navigate('/'); 
+//         }
+//     } else {
+//         const errorText = await response.text(); 
+//         console.error('Error creating book:', errorText);
+//         alert('Error creating book: ' + errorText);
+//     }
+// } catch (error) {
+//     console.error('Network error:', error);
+//     alert('Error creating book: ' + error.message);
+// }
+// };
+// // IT WORKS ===============================================================
 
 
-    return (
+//     return (
 
-        <div>
-            <h1> create Book page </h1>
-            <br />
-            <h3> fill out the form to publish your book</h3>
-            <br />
+//         <div>
+//             <h1> create Book page </h1>
+//             <br />
+//             <h3> fill out the form to publish your book</h3>
+//             <br />
 
-            <form className='create-book-form' onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Book Name"
-                    value={bookname}
-                    onChange={(e) => setBookname(e.target.value)}
-                    required
-                />
+//             <form className='create-book-form' onSubmit={handleSubmit}>
+//                 <input
+//                     type="text"
+//                     placeholder="Book Name"
+//                     value={bookname}
+//                     onChange={(e) => setBookname(e.target.value)}
+//                     required
+//                 />
 
-                <br />
+//                 <br />
 
-                <input
-                    type="text"
-                    placeholder="Author"
-                    value={author}
-                    onChange={(e) => setAuthor(e.target.value)}
-                    required
-                />
+//                 <input
+//                     type="text"
+//                     placeholder="Author"
+//                     value={author}
+//                     onChange={(e) => setAuthor(e.target.value)}
+//                     required
+//                 />
 
-                <br />
+//                 <br />
 
-                <input
-                    type="number"
-                    placeholder="Price"
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                    required
-                />
+//                 <input
+//                     type="number"
+//                     placeholder="Price"
+//                     value={price}
+//                     onChange={(e) => setPrice(e.target.value)}
+//                     required
+//                 />
 
-                 <br />
+//                  <br />
 
-                <button className='submit-button' type="submit">Create Book</button>
-            </form>
-        </div>
-    )
-}
-export default CreateBook
+//                 <button className='submit-button' type="submit">Create Book</button>
+//             </form>
+//         </div>
+//     )
+// }
+// export default CreateBook
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
