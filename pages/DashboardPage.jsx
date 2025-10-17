@@ -17,7 +17,8 @@ const DashboardPage = () => {
             //await Axios.get('http://localhost:8080/api/users/out') <=== Axios Does not work
 
             //const response = await fetch('http://localhost:8080/api/users/out')
-            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')
+            // it works for Vercel
+            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
 
             if (!response.ok) {
                 throw new Error('Network response WAS NOT ok');

@@ -17,10 +17,12 @@ const RegisterPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         //Axios.post('http://localhost:8080/api/users/register', { onlinename, email, password })
-        Axios.post('https://online-shop-backend-three.vercel.app/api/users/register', { onlinename, email, password })
+        // it works for Vercel
+        Axios.post('https://online-shop-backend-three.vercel.app/api/users/register', { onlinename, email, password })// it works for Vercel
             .then((response) => {
                 if (response.data.status) {
-                    alert('USER registered successfully !!!')
+                    ///alert('USER registered successfully !!!')
+                    alert(' VERCEL USER registered successfully using VERCEL !!!')
                     navigate('/login')
                 }
             }).catch((error) => {

@@ -11,7 +11,8 @@ const BooksPage = () => {
 
 
             //const response = await fetch('http://localhost:8080/api/users/getallbooks');
-            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/getallbooks');
+            // it works for Vercel
+            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/getallbooks');// it works for Vercel
 
 
             if (!response.ok) {

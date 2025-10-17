@@ -23,13 +23,17 @@ const LoginPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         //Axios.post('http://localhost:8080/api/users/login', { email, password })
-        Axios.post('https://online-shop-backend-three.vercel.app/api/users/login', { email, password })
+           
+        // it works for Vercel
+        Axios.post('https://online-shop-backend-three.vercel.app/api/users/login', { email, password })// it works for Vercel
             .then((response) => {
                 //console.log(response)
 
                 if (response.status) {
                     console.log("Login token:", Boolean(response.status))
-                    alert('USER logged-in successfully !!!')
+                    //alert('USER logged-in successfully !!!')
+                    alert('Vercel USER logged-in successfully using Vercel !!!')
+
 
                     // original  dispatch(signInSuccess(response));
                     dispatch(signInSuccess(response.data.user));// Redux ToolKit <<<<testing ====================================

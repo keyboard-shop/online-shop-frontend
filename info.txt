@@ -1,5 +1,7 @@
 
 
+online-shop-frontend project created: October mid 2025
+
 
 Scenario start ===================================================================
 
