@@ -1,19 +1,14 @@
 
 
-
 import React, { useEffect, useState } from 'react';
-
 
 const BooksPage = () => {
 
     const [products, setProducts] = useState([]);
 
     const fetchProducts = async () => {
-
         try {
-
             const response = await fetch('http://localhost:8080/api/users/getallbooks');
-
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -26,13 +21,14 @@ const BooksPage = () => {
             console.error('There was a problem with the fetch operation:', error);
         }
     };
+    
 
     useEffect(() => {
         fetchProducts();
     }, []);
+    
 
     return (
-
         <div className='books-page'>
             {products.map((book) => (
                 <div className='book' key={book._id}>
@@ -45,10 +41,13 @@ const BooksPage = () => {
                 </div>
             ))}
         </div>
-
     );
 };
 export default BooksPage;
+
+
+
+
 
 
 
