@@ -1,7 +1,7 @@
 
 
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
-import './App.css'
+//import './App.css'
 
 import HomePage from '../pages/HomePage'
 import RegisterPage from '../pages/RegisterPage'
@@ -10,8 +10,8 @@ import Header from '../components/Header'
 import DashboardPage from '../pages/DashboardPage'
 import PrivateRoute from '../components/PrivateRoute'
 
-import CreateBook from '../pages/CreateBook'
-import Comment from '../pages/Comment'
+// import CreateBook from '../pages/CreateBook'
+// import Comment from '../pages/Comment'
 import Like from '../pages/Like'
 
 function App() {
@@ -31,8 +31,8 @@ function App() {
 
           <Route element={<PrivateRoute />}>
             <Route path='/dashboard/' element={<DashboardPage />} >
-              <Route path="createBook" element={<CreateBook />} />
-              <Route path="comment" element={<Comment />} />
+              {/* <Route path="createBook" element={<CreateBook />} /> */}
+              {/* <Route path="comment" element={<Comment />} /> */}
               <Route path="like" element={<Like />} />
             </Route>
           </Route>
