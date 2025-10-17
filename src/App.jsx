@@ -31,8 +31,8 @@ function App() {
 
           <Route element={<PrivateRoute />}>
             <Route path='/dashboard/' element={<DashboardPage />} >
-              {/* <Route path="createBook" element={<CreateBook />} /> */}
-              {/* <Route path="comment" element={<Comment />} /> */}
+               <Route path="createBook" element={<CreateBook />} /> 
+               <Route path="comment" element={<Comment />} /> 
               <Route path="like" element={<Like />} />
             </Route>
           </Route>
