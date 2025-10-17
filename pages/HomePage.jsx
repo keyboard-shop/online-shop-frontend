@@ -12,7 +12,8 @@ const BooksPage = () => {
 
         try {
 
-            const response = await fetch('http://localhost:8080/api/users/getallbooks');
+            //const response = await fetch('http://localhost:8080/api/users/getallbooks');
+            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/getallbooks');
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');

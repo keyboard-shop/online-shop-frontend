@@ -22,7 +22,8 @@ const LoginPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        Axios.post('http://localhost:8080/api/users/login', { email, password })
+        //Axios.post('http://localhost:8080/api/users/login', { email, password })
+        Axios.post('https://online-shop-backend-three.vercel.app/api/users/login', { email, password })
             .then((response) => {
                 //console.log(response)
 
