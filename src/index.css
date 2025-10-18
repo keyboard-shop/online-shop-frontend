@@ -184,3 +184,8 @@ body {
   cursor: pointer;
   font-size: 20px;
 }
+
+.page404{
+max-width: 700px;
+height: 100%;
+}

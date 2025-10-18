@@ -18,8 +18,10 @@
 const NotFound = () => {
     return (
       <div style={{ textAlign: 'center', margin: '50px' }}>
-        <h1>404 - Page Not Found 444444444000000000000000000000444444444444444444444444444444</h1>
-        <p>The page you are looking for does not exist 44444444444444444444.</p>
+        <h1>404 - Page Not Found</h1>
+        <p>The page you are looking for does not exist</p>
+        <br />
+        <img className="page404" src="https://w3-lab.com/wp-content/uploads/2022/09/FOR-WEB-404-astronaut.jpg" alt="" />
         {/* <Link href="/">Go back to Home</Link> */}
       </div>
     );
