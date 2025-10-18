@@ -12,6 +12,7 @@ import PrivateRoute from '../components/PrivateRoute'
 import CreateBook from '../pages/CreateBook'
 import Comment from '../pages/Comment'
 import Like from '../pages/Like'
+import NotFound from '../pages/NotFound'
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
               <Route path="like" element={<Like />} />
             </Route>
           </Route>
+
+          <Route path='*' element={<NotFound />}  />
 
         </Routes>
 
