@@ -16,9 +16,9 @@
 
 
 import { Outlet, NavLink } from 'react-router-dom';
-//import { userOut } from '../src/redux/user/userSlice';
-//import { useDispatch } from 'react-redux';
-//import { useNavigate } from 'react-router-dom';
+import { userOut } from '../src/redux/user/userSlice';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -26,32 +26,32 @@ import { Outlet, NavLink } from 'react-router-dom';
 
 const DashboardExample = () => {
 
-    //const dispatch = useDispatch();
-    //const navigate = useNavigate()
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
 
 
 
 
-    // const handleSignOut = async () => {
-    //     try {
-    //         //await fetch('/api/auth/signout');
-    //         //await Axios.get('http://localhost:8080/api/users/out') <=== Axios Does not work
+    const handleSignOut = async () => {
+        try {
+            //await fetch('/api/auth/signout');
+            //await Axios.get('http://localhost:8080/api/users/out') <=== Axios Does not work
 
-    //         //const response = await fetch('http://localhost:8080/api/users/out')
-    //         // it works for Vercel
-    //         const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
+            //const response = await fetch('http://localhost:8080/api/users/out')
+            // it works for Vercel
+            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
 
-    //         if (!response.ok) {
-    //             throw new Error('Network response WAS NOT ok');
-    //         }
+            if (!response.ok) {
+                throw new Error('Network response WAS NOT ok');
+            }
 
-    //         dispatch(userOut())
-    //         navigate('/')
+            dispatch(userOut())
+            navigate('/')
 
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
 
 
