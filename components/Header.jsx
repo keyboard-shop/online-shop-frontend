@@ -108,17 +108,36 @@ const Header = () => {
             )}
 
 
-            <NavLink
-                to="/dashboard-example"
-                style={({ isActive }) => ({
-                    color: isActive ? '#fff' : '#545e6f',
-                    background: isActive ? '#7600dc' : '#f0f0f0',
 
-                })}
-                className="nav-link"
-            >
-                Dashboard Example
-            </NavLink>
+
+
+
+
+            <>
+                <NavLink
+                    to="/dashboard-example"
+                    style={({ isActive }) => ({
+                        color: isActive ? '#fff' : '#545e6f',
+                        background: isActive ? '#7600dc' : '#f0f0f0',
+
+                    })}
+                    className="nav-link"
+                >
+                    Dashboard Example
+                </NavLink>
+
+
+                <div className='avatar'>
+                    I am ONLINE
+                    <img className='image-header' src="https://www.areasofmyexpertise.com/wp-content/uploads/2020/01/00924AEA-B1C2-48A5-9B06-89B9008BEE8D-1920x1280.jpg" alt="Description of the image" />
+
+                    <span onClick={handleSignOut} className='out-button'>
+                        <h6>Sign Out</h6>
+                    </span>
+                </div>
+
+            </>
+
 
 
 
