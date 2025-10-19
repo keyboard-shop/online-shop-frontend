@@ -1,0 +1,113 @@
+
+
+
+// import React from 'react'
+
+// const DashboardExample = () => {
+//   return (
+//     <div>
+//       dashboard example
+//     </div>
+//   )
+// }
+
+// export default DashboardExample
+
+
+
+import { Outlet, NavLink } from 'react-router-dom';
+import { userOut } from '../src/redux/user/userSlice';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
+
+const DashboardExample = () => {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
+
+    const handleSignOut = async () => {
+        try {
+            //await fetch('/api/auth/signout');
+            //await Axios.get('http://localhost:8080/api/users/out') <=== Axios Does not work
+
+            //const response = await fetch('http://localhost:8080/api/users/out')
+            // it works for Vercel
+            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
+
+            if (!response.ok) {
+                throw new Error('Network response WAS NOT ok');
+            }
+
+            dispatch(userOut())
+            navigate('/')
+
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    return (
+
+        <div className='dashboard'>
+
+            <h1 className='h1-dashboard'>Seller Dashboard Page</h1>
+
+            <div className="wrapper-dashboard">
+                <div className='left-side'>
+
+                    <NavLink
+                        to="/dashboard-example/createBook-example"
+                        style={({ isActive }) => ({
+                            color: isActive ? '#fff' : '#fff',
+                            background: isActive ? '#ffa500' : '#555555',
+                            padding: '15px'
+                        })}
+                        className="nav-link"
+                    >
+                        Create Book
+                    </NavLink>
+
+                    <NavLink
+                        to="/dashboard-example/comment-example"
+                        style={({ isActive }) => ({
+                            color: isActive ? '#fff' : '#fff',
+                            background: isActive ? '#ffa500' : '#555555',
+                            padding: '15px'
+                        })}
+                        className="nav-link"
+                    >
+                        Send a message
+                    </NavLink>
+
+                    <NavLink
+                        to="/dashboard-example/like-example"
+                        style={({ isActive }) => ({
+                            color: isActive ? '#fff' : '#fff',
+                            background: isActive ? '#ffa500' : '#555555',
+                            padding: '15px'
+                        })}
+                        className="nav-link"
+                    >
+                        Like the buyer
+                    </NavLink>
+
+                    <span onClick={handleSignOut} className='out-button'>
+                        <h3>Sign Out</h3>
+                    </span>
+
+                </div>
+
+                <div className='right-side'>
+                    <Outlet />
+                </div>
+
+            </div>
+        </div>
+    )
+}
+export default DashboardExample
+

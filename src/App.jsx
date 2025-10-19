@@ -13,6 +13,7 @@ import CreateBook from '../pages/CreateBook'
 import Comment from '../pages/Comment'
 import Like from '../pages/Like'
 import NotFound from '../pages/NotFound'
+import DashboardExample from '../pages/DashboardExample'
 
 function App() {
 
@@ -31,13 +32,23 @@ function App() {
 
           <Route element={<PrivateRoute />}>
             <Route path='/dashboard/' element={<DashboardPage />} >
-               <Route path="createBook" element={<CreateBook />} /> 
-               <Route path="comment" element={<Comment />} /> 
+              <Route path="createBook" element={<CreateBook />} />
+              <Route path="comment" element={<Comment />} />
               <Route path="like" element={<Like />} />
             </Route>
           </Route>
 
-          <Route path='*' element={<NotFound />}  />
+
+
+          {/* <DashboardExample> */}
+          <Route path='/dashboard-example/' element={<DashboardExample />} >
+            <Route path="createBook-example" element={<CreateBook />} />
+            <Route path="comment-example" element={<Comment />} />
+            <Route path="like-example" element={<Like />} />
+          </Route>
+
+
+          <Route path='*' element={<NotFound />} />
 
         </Routes>
 

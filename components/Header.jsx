@@ -56,6 +56,7 @@ const Header = () => {
                 HOME PAGE
             </NavLink>
 
+
             {currentUser ? (
                 <>
                     <NavLink
@@ -105,6 +106,21 @@ const Header = () => {
                     </NavLink>
                 </>
             )}
+
+
+            <NavLink
+                to="/dashboard-example"
+                style={({ isActive }) => ({
+                    color: isActive ? '#fff' : '#545e6f',
+                    background: isActive ? '#7600dc' : '#f0f0f0',
+
+                })}
+                className="nav-link"
+            >
+                Dashboard Example
+            </NavLink>
+
+
 
         </header>
     )
