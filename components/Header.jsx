@@ -75,10 +75,10 @@ const Header = () => {
                         I am ONLINE
                         <img className='image-header' src="https://www.areasofmyexpertise.com/wp-content/uploads/2020/01/00924AEA-B1C2-48A5-9B06-89B9008BEE8D-1920x1280.jpg" alt="Description of the image" />
 
-                        {/* ORIGINAL <span onClick={handleSignOut} className='out-button'> */}
-                        <span className='out-button'>
+                         <span onClick={handleSignOut} className='out-button'> 
                             <h6>Sign Out</h6>
                         </span>
+
                     </div>
                 </>
             ) : (
@@ -132,9 +132,13 @@ const Header = () => {
                     I am ONLINE
                     <img className='image-header' src="https://www.areasofmyexpertise.com/wp-content/uploads/2020/01/00924AEA-B1C2-48A5-9B06-89B9008BEE8D-1920x1280.jpg" alt="Description of the image" />
 
-                    <span onClick={handleSignOut} className='out-button'>
+
+                    {/* ORIGINAL <span onClick={handleSignOut} className='out-button'> */}
+                    {/* EXAMPLE */}
+                    <span className='out-button'> 
                         <h6>Sign Out</h6>
                     </span>
+
                 </div>
 
             </>
