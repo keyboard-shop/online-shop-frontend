@@ -16,9 +16,9 @@
 
 
 import { Outlet, NavLink } from 'react-router-dom';
-import { userOut } from '../src/redux/user/userSlice';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+//import { userOut } from '../src/redux/user/userSlice';
+//import { useDispatch } from 'react-redux';
+//import { useNavigate } from 'react-router-dom';
 
 
 
@@ -26,35 +26,40 @@ import { useNavigate } from 'react-router-dom';
 
 const DashboardExample = () => {
 
-    const dispatch = useDispatch();
-    const navigate = useNavigate()
+    //const dispatch = useDispatch();
+    //const navigate = useNavigate()
 
-    const handleSignOut = async () => {
-        try {
-            //await fetch('/api/auth/signout');
-            //await Axios.get('http://localhost:8080/api/users/out') <=== Axios Does not work
 
-            //const response = await fetch('http://localhost:8080/api/users/out')
-            // it works for Vercel
-            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
 
-            if (!response.ok) {
-                throw new Error('Network response WAS NOT ok');
-            }
 
-            dispatch(userOut())
-            navigate('/')
+    // const handleSignOut = async () => {
+    //     try {
+    //         //await fetch('/api/auth/signout');
+    //         //await Axios.get('http://localhost:8080/api/users/out') <=== Axios Does not work
 
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    //         //const response = await fetch('http://localhost:8080/api/users/out')
+    //         // it works for Vercel
+    //         const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
+
+    //         if (!response.ok) {
+    //             throw new Error('Network response WAS NOT ok');
+    //         }
+
+    //         dispatch(userOut())
+    //         navigate('/')
+
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
+
+
 
     return (
 
         <div className='dashboard'>
 
-            <h1 className='h1-dashboard'>Seller Dashboard Page</h1>
+            <h1 className='h1-dashboard'>Seller Dashboard Page Example</h1>
 
             <div className="wrapper-dashboard">
                 <div className='left-side'>
@@ -68,7 +73,7 @@ const DashboardExample = () => {
                         })}
                         className="nav-link"
                     >
-                        Create Book
+                        Create Book Example
                     </NavLink>
 
                     <NavLink
@@ -80,7 +85,7 @@ const DashboardExample = () => {
                         })}
                         className="nav-link"
                     >
-                        Send a message
+                        Send a message Example
                     </NavLink>
 
                     <NavLink
@@ -92,11 +97,12 @@ const DashboardExample = () => {
                         })}
                         className="nav-link"
                     >
-                        Like the buyer
+                        Like the buyer Example
                     </NavLink>
 
-                    <span onClick={handleSignOut} className='out-button'>
-                        <h3>Sign Out</h3>
+                    {/* ORIGINAL <span onClick={handleSignOut} className='out-button'> */}
+                    <span className='out-button'>
+                        <h3>Sign Out Example</h3>
                     </span>
 
                 </div>
