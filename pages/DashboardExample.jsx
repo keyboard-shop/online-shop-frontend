@@ -15,105 +15,105 @@
 
 
 
-import { Outlet, NavLink } from 'react-router-dom';
-import { userOut } from '../src/redux/user/userSlice';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+// import { Outlet, NavLink } from 'react-router-dom';
+// import { userOut } from '../src/redux/user/userSlice';
+// import { useDispatch } from 'react-redux';
+// import { useNavigate } from 'react-router-dom';
 
 
 
 
 
-const DashboardExample = () => {
+// const DashboardExample = () => {
 
-    const dispatch = useDispatch();
-    const navigate = useNavigate()
-
-
-
-
-    const handleSignOut = async () => {
-        try {
-            //await fetch('/api/auth/signout');
-            //await Axios.get('http://localhost:8080/api/users/out') <=== Axios Does not work
-
-            //const response = await fetch('http://localhost:8080/api/users/out')
-            // it works for Vercel
-            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
-
-            if (!response.ok) {
-                throw new Error('Network response WAS NOT ok');
-            }
-
-            dispatch(userOut())
-            navigate('/')
-
-        } catch (error) {
-            console.log(error);
-        }
-    };
+//     const dispatch = useDispatch();
+//     const navigate = useNavigate()
 
 
 
-    return (
 
-        <div className='dashboard'>
+//     const handleSignOut = async () => {
+//         try {
+//             //await fetch('/api/auth/signout');
+//             //await Axios.get('http://localhost:8080/api/users/out') <=== Axios Does not work
 
-            <h1 className='h1-dashboard'>Seller Dashboard Page Example</h1>
+//             const response = await fetch('http://localhost:8080/api/users/out')
+//             // it works for Vercel
+//             //const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
 
-            <div className="wrapper-dashboard">
-                <div className='left-side'>
+//             if (!response.ok) {
+//                 throw new Error('Network response WAS NOT ok');
+//             }
 
-                    <NavLink
-                        to="/dashboard-example/createBook-example"
-                        style={({ isActive }) => ({
-                            color: isActive ? '#fff' : '#fff',
-                            background: isActive ? '#ffa500' : '#555555',
-                            padding: '15px'
-                        })}
-                        className="nav-link"
-                    >
-                        Create Book Example
-                    </NavLink>
+//             dispatch(userOut())
+//             navigate('/')
 
-                    <NavLink
-                        to="/dashboard-example/comment-example"
-                        style={({ isActive }) => ({
-                            color: isActive ? '#fff' : '#fff',
-                            background: isActive ? '#ffa500' : '#555555',
-                            padding: '15px'
-                        })}
-                        className="nav-link"
-                    >
-                        Send a message Example
-                    </NavLink>
+//         } catch (error) {
+//             console.log(error);
+//         }
+//     };
 
-                    <NavLink
-                        to="/dashboard-example/like-example"
-                        style={({ isActive }) => ({
-                            color: isActive ? '#fff' : '#fff',
-                            background: isActive ? '#ffa500' : '#555555',
-                            padding: '15px'
-                        })}
-                        className="nav-link"
-                    >
-                        Like the buyer Example
-                    </NavLink>
 
-                    {/* ORIGINAL <span onClick={handleSignOut} className='out-button'> */}
-                    <span className='out-button'>
-                        <h3>Sign Out Example</h3>
-                    </span>
 
-                </div>
+//     return (
 
-                <div className='right-side'>
-                    <Outlet />
-                </div>
+//         <div className='dashboard'>
 
-            </div>
-        </div>
-    )
-}
-export default DashboardExample
+//             <h1 className='h1-dashboard'>Seller Dashboard Page Example</h1>
+
+//             <div className="wrapper-dashboard">
+//                 <div className='left-side'>
+
+//                     <NavLink
+//                         to="/dashboard-example/createBook-example"
+//                         style={({ isActive }) => ({
+//                             color: isActive ? '#fff' : '#fff',
+//                             background: isActive ? '#ffa500' : '#555555',
+//                             padding: '15px'
+//                         })}
+//                         className="nav-link"
+//                     >
+//                         Create Book Example
+//                     </NavLink>
+
+//                     <NavLink
+//                         to="/dashboard-example/comment-example"
+//                         style={({ isActive }) => ({
+//                             color: isActive ? '#fff' : '#fff',
+//                             background: isActive ? '#ffa500' : '#555555',
+//                             padding: '15px'
+//                         })}
+//                         className="nav-link"
+//                     >
+//                         Send a message Example
+//                     </NavLink>
+
+//                     <NavLink
+//                         to="/dashboard-example/like-example"
+//                         style={({ isActive }) => ({
+//                             color: isActive ? '#fff' : '#fff',
+//                             background: isActive ? '#ffa500' : '#555555',
+//                             padding: '15px'
+//                         })}
+//                         className="nav-link"
+//                     >
+//                         Like the buyer Example
+//                     </NavLink>
+
+//                     {/* ORIGINAL <span onClick={handleSignOut} className='out-button'> */}
+//                     <span className='out-button'>
+//                         <h3>Sign Out Example</h3>
+//                     </span>
+
+//                 </div>
+
+//                 <div className='right-side'>
+//                     <Outlet />
+//                 </div>
+
+//             </div>
+//         </div>
+//     )
+// }
+// export default DashboardExample
 

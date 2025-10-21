@@ -6,9 +6,15 @@ import React from 'react'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { useSelector } from 'react-redux';// it works, see below
+
 
 const CreateBook = () => {
 
+    const { currentUser } = useSelector((state) => state.user);// it works, see below
+    console.log("USER token logged-In ===> ", currentUser)
+    console.log("_id of the Current User ===> ", currentUser._id)
+  
     const [bookname, setBookname] = useState('');
     const [author, setAuthor] = useState('');
     const [price, setPrice] = useState('');
@@ -16,20 +22,28 @@ const CreateBook = () => {
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
-        
         e.preventDefault();
     
-// IT WORKS ==========================================================
+// IT WORKS start, seller _id ==========================================================
+// ORIGINAL
+// const bookData = {
+//     bookname,
+//     author,
+//     price
+// };
+
+// it works
 const bookData = {
     bookname,
     author,
-    price
+    price,
+    seller: currentUser._id// it works, from Redux global state, for controller 'const cretaBook function
 };
 
 try {
-    //const response = await fetch('http://localhost:8080/api/users/createbook', {
+    const response = await fetch('http://localhost:8080/api/users/createbook', {
     // it works for Vercel
-    const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/createbook', {// <=== it works for Vercel
+    //const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/createbook', {// <=== it works for Vercel
         method: 'POST',
         headers: {
             'Content-Type': 'application/json', 
@@ -53,7 +67,7 @@ try {
     alert('Error creating book: ' + error.message);
 }
 };
-// IT WORKS ===============================================================
+// IT WORKS end, seller _id ===============================================================
 
 
     return (

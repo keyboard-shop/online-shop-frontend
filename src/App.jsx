@@ -13,7 +13,11 @@ import CreateBook from '../pages/CreateBook'
 import Comment from '../pages/Comment'
 import Like from '../pages/Like'
 import NotFound from '../pages/NotFound'
-import DashboardExample from '../pages/DashboardExample'
+import AllBooksById from '../pages/AllBooksById'
+import DisplayAllBooks from '../pages/DisplayAllBooks'
+
+//import { AllBooksById } from '../pages/AllBooksById'
+//import DashboardExample from '../pages/DashboardExample'
 
 function App() {
 
@@ -27,6 +31,8 @@ function App() {
         <Routes>
 
           <Route path='/' element={<HomePage />} />
+          <Route path='/display-all-books' element={<DisplayAllBooks />} />
+          <Route path='/the-seller/:sellerId' element={<AllBooksById />} />
           <Route path='/register' element={<RegisterPage />} />
           <Route path='/login' element={<LoginPage />} />
 
@@ -41,11 +47,11 @@ function App() {
 
 
           {/* <DashboardExample> */}
-          <Route path='/dashboard-example/' element={<DashboardExample />} >
+          {/* <Route path='/dashboard-example/' element={<DashboardExample />} >
             <Route path="createBook-example" element={<CreateBook />} />
             <Route path="comment-example" element={<Comment />} />
             <Route path="like-example" element={<Like />} />
-          </Route>
+          </Route> */}
 
 
           <Route path='*' element={<NotFound />} />

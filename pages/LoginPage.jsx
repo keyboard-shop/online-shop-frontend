@@ -22,10 +22,10 @@ const LoginPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        //Axios.post('http://localhost:8080/api/users/login', { email, password })
+        Axios.post('http://localhost:8080/api/users/login', { email, password })
            
         // it works for Vercel
-        Axios.post('https://online-shop-backend-three.vercel.app/api/users/login', { email, password })// it works for Vercel
+        // Axios.post('https://online-shop-backend-three.vercel.app/api/users/login', { email, password })// it works for Vercel
             .then((response) => {
                 //console.log(response)
 

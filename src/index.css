@@ -189,3 +189,72 @@ body {
 max-width: 700px;
 height: 100%;
 }
+
+
+/* James start ============================================== */
+.james-page{
+  display: flex;
+  border: 5px solid grey;
+  gap: 20px;
+  padding: 20px;
+}
+
+.h2-james{
+  text-align: center;
+}
+
+.james-book-card{
+  list-style-type: none;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.james-span-id{
+  background-color: lightgreen;
+  padding: 5px 10px;
+}
+
+.james-dashboard{
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+}
+
+/* sarah */
+.article-homepage{
+  width: fit-content;
+  padding: 20px;
+  border: 5px solid saddlebrown;
+  text-align: center;
+  margin: auto;
+}
+/* James end ============================================== */
+
+
+
+
+/* all book all sellers, start ======================================== */
+.page-all-books{
+  text-align: center;
+  font-style: italic;
+  margin: 20px 0px;
+}
+
+.book-list{
+  border: 5px solid aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
+  padding: 20px;
+}
+.book-card{
+  width: fit-content;
+  border: 5px solid chocolate;
+  padding: 10px 20px;
+}
+.seller-card{
+  padding: 5px;
+  background-color: lightblue;
+}
+/* all book all sellers, end ======================================== */

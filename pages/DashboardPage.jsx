@@ -3,10 +3,13 @@
 
 import { Outlet, NavLink } from 'react-router-dom';
 import { userOut } from '../src/redux/user/userSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';// Redux
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';// Redux
 
 const DashboardPage = () => {
+
+    const { currentUser } = useSelector((state) => state.user);// from Redux seller _id
 
     const dispatch = useDispatch();
     const navigate = useNavigate()
@@ -16,9 +19,9 @@ const DashboardPage = () => {
             //await fetch('/api/auth/signout');
             //await Axios.get('http://localhost:8080/api/users/out') <=== Axios Does not work
 
-            //const response = await fetch('http://localhost:8080/api/users/out')
+            const response = await fetch('http://localhost:8080/api/users/out')
             // it works for Vercel
-            const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
+            //const response = await fetch('https://online-shop-backend-three.vercel.app/api/users/out')// it works for Vercel
 
             if (!response.ok) {
                 throw new Error('Network response WAS NOT ok');
@@ -36,7 +39,7 @@ const DashboardPage = () => {
 
         <div className='dashboard'>
 
-            <h1 className='h1-dashboard'>Seller Dashboard Page</h1>
+            <h1 className='h1-dashboard'> {currentUser?.onlinename} Dashboard Page</h1>
 
             <div className="wrapper-dashboard">
                 <div className='left-side'>
@@ -78,7 +81,7 @@ const DashboardPage = () => {
                     </NavLink>
 
                     <span onClick={handleSignOut} className='out-button'>
-                        <h3>Sign Out</h3>
+                        <h3>Sign Out {currentUser?.onlinename}</h3>
                     </span>
 
                 </div>
