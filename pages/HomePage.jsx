@@ -81,7 +81,7 @@ const BooksPage = () => {
         try {
 
             // getAllBooks
-            const response = await fetch('http://localhost:8080/api/users/getallbooks');//it works
+            const response = await fetch('http://localhost:8080/api/users/getallbooks');// it works
             // testing const response = await fetch('http://localhost:8080/api/users/');// testing
 
             // it works for Vercel

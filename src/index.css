@@ -65,6 +65,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
   font-size: 30px;
 }
@@ -258,3 +259,40 @@ height: 100%;
   background-color: lightblue;
 }
 /* all book all sellers, end ======================================== */
+
+
+
+.personal-page-message{
+  margin: 100px auto;
+  width: fit-content;
+  border: 5px solid red;
+  padding: 10px 20px;
+  text-align: center;
+}
+.personal-page-message a{
+  display: block;
+  margin: 0 auto;
+  color: white;
+  font-size: 20px;
+  background-color: red;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.h1-personal-page{
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  background-color: gray;
+  padding: 50px 100px;
+}
+.personal-page-dashboard{
+  margin-top: 100px;
+  border: 5px solid palegoldenrod;
+  text-align: center;
+}
+.personal-page-user{
+  padding: 5px 10px;
+  background-color: lightgreen;
+  font-style: italic;
+}

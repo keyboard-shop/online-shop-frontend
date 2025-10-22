@@ -15,6 +15,7 @@ import Like from '../pages/Like'
 import NotFound from '../pages/NotFound'
 import AllBooksById from '../pages/AllBooksById'
 import DisplayAllBooks from '../pages/DisplayAllBooks'
+import PersonalPage from '../pages/PersonalPage'
 
 //import { AllBooksById } from '../pages/AllBooksById'
 //import DashboardExample from '../pages/DashboardExample'
@@ -35,6 +36,7 @@ function App() {
           <Route path='/the-seller/:sellerId' element={<AllBooksById />} />
           <Route path='/register' element={<RegisterPage />} />
           <Route path='/login' element={<LoginPage />} />
+          <Route path='/personal-page' element={<PersonalPage />} />
 
           <Route element={<PrivateRoute />}>
             <Route path='/dashboard/' element={<DashboardPage />} >

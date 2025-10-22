@@ -166,6 +166,21 @@ const Header = () => {
 
 
 
+                    <NavLink
+                        to="/personal-page"
+                        style={({ isActive }) => ({
+                            color: isActive ? '#fff' : '#545e6f',
+                            background: isActive ? '#7600dc' : '#f0f0f0',
+                        })}
+                        className="nav-link"
+                    >
+                        PERSONAL PAGE
+                    </NavLink>
+
+
+
+
+
 
 
 
